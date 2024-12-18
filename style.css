@@ -1,0 +1,57 @@
+.banner {
+  background-color: #00f; /* Banner ka background color */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  position: relative; /* Ensures the button stays inside the banner */
+  margin-bottom: 20px; /* Space between banner and other elements */
+  z-index: 1; /* Makes sure banner stays below the button */
+}
+#main-content {
+  margin-top: 50px; /* Gives space for the fixed banner */
+}
+
+/* Footer Style */
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-social-icons {
+  display:flex;
+  justify-content:flex-end;
+  gap: 15px;
+  padding: 10px;
+}
+
+.footer-social-icons i{
+  color: grey;
+  margin: 10px;
+}
+#AboutMe {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: lightblue;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#Frontend {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+}
+header, section {
+  text-align: center;
+  padding: 20px;
+}
+#achievements {
+  background-color: #eef;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
