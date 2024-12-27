@@ -7,6 +7,7 @@
   position: relative; /* Ensures the button stays inside the banner */
   margin-bottom: 20px; /* Space between banner and other elements */
   z-index: 1; /* Makes sure banner stays below the button */
+  font-family: 'Trebuchet MS';
 }
 #main-content {
   margin-top: 50px; /* Gives space for the fixed banner */
