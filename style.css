@@ -39,6 +39,9 @@ footer {
   font-size: 18px; /* Text size */
   font-weight: bold;
 }
+#aboutme{
+  font-family:'Times New Roman';
+}
 #AboutMe {
   display: block;
   width: 300px;
@@ -64,4 +67,6 @@ header, section {
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;
+  height: auto;
 }
