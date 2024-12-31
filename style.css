@@ -40,7 +40,9 @@ footer {
   font-weight: bold;
 }
 #aboutme{
-  font-family:'Times New Roman';
+  /* font-family:'Times New Roman'; */
+  font-family: "Baloo Bhai 2", serif;
+  font-style: normal;
 }
 #AboutMe {
   display: block;
