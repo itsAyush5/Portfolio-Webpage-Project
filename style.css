@@ -41,7 +41,8 @@ footer {
 }
 #aboutme{
   /* font-family:'Times New Roman'; */
-  font-family: "Baloo Bhai 2", serif;
+  font-family: "Poppins", serif;
+  font-weight: 300;
   font-style: normal;
 }
 #AboutMe {
