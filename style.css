@@ -73,3 +73,14 @@ header, section {
   width: auto;
   height: auto;
 }
+nav a:hover {
+  background-color: #575757; 
+}
+.nav a{
+  gap: 2px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px;
+  align-items: center;
+}
