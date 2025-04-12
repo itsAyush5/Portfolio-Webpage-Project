@@ -21,7 +21,7 @@ footer {
 
 .footer-social-icons {
   display:flex;
-  justify-content:flex-end;
+  justify-content:center;
   align-items: center;
   gap: 10px;
   padding: 10px;
@@ -65,7 +65,7 @@ header, section {
   text-align: center;
   padding: 20px;
 }
-#achievements {
+/* #achievements {
   background-color: #eef;
   padding: 30px;
   border-radius: 10px;
@@ -73,14 +73,22 @@ header, section {
   width: auto;
   height: auto;
 }
-nav a:hover {
-  background-color: #575757; 
-}
+#achievements h2 {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+} */
 .nav a{
   gap: 2px;
   color: white;
   text-decoration: none;
   text-align: center;
   padding: 15px;
+  /* display: flex; */
   align-items: center;
+  /* font-size: 20px; */
+  
+}
+nav a:hover {
+  background-color: #575757; 
 }
