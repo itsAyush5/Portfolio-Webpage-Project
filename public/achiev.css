@@ -1,0 +1,231 @@
+.text {
+    position: relative;
+    line-height: 72px;
+}
+.section-title-child {
+    width: 100px;
+    position: relative;
+    border-radius: 2px;
+    background-color: #fdc435;
+    height: 4px;
+}
+.section-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-align: center;
+    font-size: 48px;
+}
+.text1 {
+    align-self: stretch;
+    position: relative;
+    font-size: 40px;
+    line-height: 150%;
+    align-items: center;
+}
+.text2 {
+    align-self: stretch;
+    position: relative;
+    line-height: 150%;
+    font-family: Nunito;
+    color: #828282;
+}
+.text3 {
+    position: relative;
+    line-height: 150%;
+    font-weight: 500;
+}
+.boto-secudrio {
+    border-radius: 24px;
+    /* border: 1px solid #25282b; */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 8px 24px;
+    font-family: Roboto;
+    background-color: var(--brand-yellow);
+}
+.text-parent {
+    position: relative;
+    height: 44.27%;
+    width: 82%;
+    top: 27.96%;
+    right: 7.83%;
+    bottom: 27.77%;
+    left: 10.17%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.achiv-nfo {
+    width: 496px;
+    position: relative;
+    background-color: #fff;
+    height: 524px;
+}
+.pexels-elly-fairytale-3823207-icon {
+    width: 496px;
+    position: relative;
+    height: 526px;
+    object-fit:contain;
+}
+.achiv1 {
+    width: 750px;
+    box-shadow: 0px 6px 64px rgba(112, 144, 176, 0.1);
+    border-radius: 24px;
+    height: 524px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}
+.achiv2-child {
+    width: 496px;
+    position: relative;
+    height: 524px;
+    object-fit: cover;
+}
+.text-group {
+    position: absolute;
+    height: 39.12%;
+    width: 82%;
+    top: 30.53%;
+    right: 7.83%;
+    bottom: 30.34%;
+    left: 10.17%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+}
+.achiv2 {
+     width: 750px;
+    box-shadow: 0px 6px 64px rgba(112, 144, 176, 0.1);
+    border-radius: 24px;
+    height: 524px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}
+.achievements {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    text-align: left;
+    font-size: 18px;
+    color: #25282b;
+    font-family: 'Playfair Display';
+}
+.madelyn-torff {
+    position:absolute;
+    top: 11px;
+    left: 120px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 32.4px;
+    white-space: nowrap;
+    color: black;
+    text-align: left;
+}
+.sobre {
+    position: relative;
+    line-height: 28px;
+    font-weight: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.tab-default {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.nav {
+    position: absolute;
+    top: 14px;
+    right: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 48px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+.header {
+    width: 100%;
+    position: relative;
+    /* border: 1px solid #000; */
+    box-sizing: border-box;
+    height: 56px;
+    text-align: left;
+    font-size: 18px;
+    color: #25282b;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.header a{
+    color: #000;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fdc435;
+    transition: width 0.3s ease-in-out;
+}
+.nav a:hover::after {
+    width: 100%;
+}
+.nav a:hover {
+    transition: color 0.3s ease;
+    color: #fdc435;
+}
+.ayush-devspace-logo {
+    position: absolute;
+    width: 61px;
+    height: 56px;
+    top: 0;
+    left: 41px;
+    object-fit:contain;
+    padding-top: 2px;
+    margin-top: 1px;
+}
+a{
+    color: #000;
+    font-family: "Nunito-Regular", Helvetica;
+}
+.madelyn-torff a{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.achiv3{
+     width: 750px;
+    box-shadow: 0px 6px 64px rgba(112, 144, 176, 0.1);
+    border-radius: 24px;
+    height: 600px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: center;
+}

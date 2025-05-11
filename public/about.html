@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, width=device-width">
+
+	<link rel="stylesheet" href="about.css" />
+	<link rel="stylesheet" href="about2.css" />
+	<link rel="stylesheet" href="aboutguide.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@700&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+	<title>About me</title>
+	<meta name="description" content="Ayush's Portfolio - Frontend Developer">
+    <meta name="keywords" content="Ayush, Frontend Developer, Portfolio">
+    <meta name="author" content="Ayush Kunkulol">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCMGH89S7V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SCMGH89S7V');
+</script>
+<body>
+
+	<div class="about-simple-footer">
+		<div class="about-me">
+			<b class="title">About me</b>
+			<div class="text">I am a passionate learner, creator, and aspiring engineer with a knack for storytelling
+				and a deep interest in technology. As a student of engineering, I enjoy exploring concepts that merge
+				creativity and logic. Currently I am enhancing my skills in front-end development, or presenting on
+				thought-provoking topics, I'm always eager to learn and grow. Beyond academics, I believe in constant
+				self-improvement and aim to make a positive impact through my work and passion for learning. Let's
+				connect and build something amazing together!</div>
+			<div class="button-primary">
+				<div class="text1"><a href="https://drive.google.com/file/d/1MOKcSIrijpGtTrxu3J6etEKu60srPxHK/view?usp=drive_link">Resume</a></div>
+			</div>
+		</div>
+		<div class="bg-2">
+			<div class="bg-2-child">
+			</div>
+			<img class="pexels-artem-beliaikin-1832323-icon" alt="" src="images/Ayush.png">
+
+		</div>
+		<header class="header">
+			<div class="madelyn-torff"><a href="index.html">Ayush Devspace</a></div>
+			<div class="nav">
+				<div class="tab-default" id="tabDefault">
+					<div class="sobre"><a href="index.html">Home</a></div>
+				</div>
+				<div class="tab-default" id="tabDefault">
+					<div class="sobre"><a href="about.html">About me</a></div>
+				</div>
+				<div class="tab-default" id="tabDefault">
+					<div class="sobre"><a href="projects.html">Projects</a></div>
+				</div>
+				<div class="tab-default">
+					<div class="sobre"><a href="achiev.html">Achievements</a></div>
+				</div>
+			</div>
+	</div>
+
+	</header>
+	<img class="ayush-devspace-logo" src="images/Ayush Devspace logo (1).png" />
+	<footer>
+
+		<div class="footer-social-icons">
+			<span>Connect with Me : </span>
+			<a href="https://github.com/itsAyush5" target="_blank" alt="Github">
+				<i class="fa-brands fa-github fa-2x"></i>
+			</a>
+			<a href="https://www.linkedin.com/in/ayushkunkulol5" target="_blank" alt="Linkedin">
+				<i class="fa-brands fa-linkedin fa-2x"></i>
+			</a>
+			<a href="https://www.instagram.com/ayush_kunkulol_/" target="_blank" alt="Instagram">
+				<i class="fa-brands fa-instagram fa-2x"></i>
+			</a>
+			<a href="https://x.com/yeah_its_Ayush/" target="_blank" alt="Twitter">
+				<i class="fa-brands fa-x-twitter"></i>
+			</a>
+		</div>
+	</footer>
+	</div>
+
+
+
+
+	<script>
+		var madelynTorffText = document.getElementById("madelynTorffText");
+		if (madelynTorffText) {
+			madelynTorffText.addEventListener("click", function (e) {
+				// Add your code here
+			});
+		}
+
+		var tabDefault = document.getElementById("tabDefault");
+		if (tabDefault) {
+			tabDefault.addEventListener("click", function (e) {
+				// Add your code here
+			});
+		}
+
+		var sobreText = document.getElementById("sobreText");
+		if (sobreText) {
+			sobreText.addEventListener("click", function () {
+				var anchor = document.querySelector("[data-scroll-to='footerIcons']");
+				if (anchor) {
+					anchor.scrollIntoView({ "block": "start", "behavior": "smooth" })
+				}
+			});
+		}
+	</script>
+</body>
+
+</html>
