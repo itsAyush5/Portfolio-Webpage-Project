@@ -53,18 +53,18 @@ body {
 }
 
 .portfolio-with-form .img {
-    position: absolute;
-    width: 7220px;
-    height: 629px;
+    position: relative;
+    width: 720rem;
+    height: 629rem;
     top: 0;
     left: 0;
 }
 
 .portfolio-with-form .header {
-    position: absolute;
-    width: 1880px;
-    height: 56px;
-    top: 0px;
+    position: relative;
+    width: 180rem;
+    height: 56rem;
+    top: 0rem;
     left: 10px;
     background-color: transparent;
     /* border: 1px solid; */
@@ -92,7 +92,7 @@ body {
     gap: 48px;
     position: absolute;
     top: 14px;
-    left: 983px;
+    left: 835px;
 }
 
 .portfolio-with-form .tab-default {

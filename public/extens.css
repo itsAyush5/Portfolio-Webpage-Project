@@ -23,7 +23,6 @@
     position: relative;
     font-size: 40px;
     line-height: 150%;
-    align-items: center;
 }
 .text2 {
     align-self: stretch;
@@ -49,7 +48,7 @@
     background-color: var(--brand-yellow);
 }
 .text-parent {
-    position: relative;
+    position: absolute;
     height: 44.27%;
     width: 82%;
     top: 27.96%;
@@ -62,7 +61,7 @@
     justify-content: center;
     gap: 24px;
 }
-.achiv-nfo {
+.extension-nfo {
     width: 496px;
     position: relative;
     background-color: #fff;
@@ -72,9 +71,9 @@
     width: 496px;
     position: relative;
     height: 526px;
-    object-fit:contain;
+    object-fit: cover;
 }
-.achiv1 {
+.extension1 {
     width: 750px;
     box-shadow: 0px 6px 64px rgba(112, 144, 176, 0.1);
     border-radius: 24px;
@@ -86,7 +85,7 @@
     align-items:center;
     justify-content: center;
 }
-.achiv2-child {
+.extension2-child {
     width: 496px;
     position: relative;
     height: 524px;
@@ -102,12 +101,12 @@
     left: 10.17%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     gap: 24px;
 }
-.achiv2 {
-     width: 750px;
+.extension2 {
+    width: 750px;
     box-shadow: 0px 6px 64px rgba(112, 144, 176, 0.1);
     border-radius: 24px;
     height: 524px;
@@ -118,14 +117,14 @@
     align-items:center;
     justify-content: center;
 }
-.achievements {
+.extensions {
     position: relative;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    gap: 80px;
     text-align: left;
     font-size: 18px;
     color: #25282b;
@@ -137,6 +136,7 @@
     left: 120px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 700;
+    /* color: var(--font-high-emphasis); */
     font-size: 18px;
     letter-spacing: 0;
     line-height: 32.4px;
@@ -165,7 +165,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 48px;
+    gap: 40px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
 }
 .header {
@@ -193,12 +193,16 @@
     background-color: #fdc435;
     transition: width 0.3s ease-in-out;
 }
+
+/* On Hover: Expand the Underline */
 .nav a:hover::after {
     width: 100%;
 }
+
+/* Optional: Add a slight delay to the underline animation on hover */
 .nav a:hover {
     transition: color 0.3s ease;
-    color: #fdc435;
+    color: #fdc435;  /* Change text color on hover for effect */
 }
 .ayush-devspace-logo {
     position: absolute;
@@ -216,16 +220,4 @@ a{
 }
 .madelyn-torff a{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.achiv3{
-     width: 750px;
-    box-shadow: 0px 6px 64px rgba(112, 144, 176, 0.1);
-    border-radius: 24px;
-    height: 600px;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row;
-    align-items:center;
-    justify-content: center;
 }
