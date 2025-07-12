@@ -19,6 +19,589 @@
     <meta name="keywords" content="Ayush, Frontend Developer, Portfolio">
     <meta name="author" content="Ayush Kunkulol">
 	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<style>
+		:root {
+            --bg-color: #1f242d;
+            --second-bg-color: #323946;
+            --text-color: #ffffff;
+            --main-color: #0ef;
+            --shadow-color: rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+        }
+
+        body {
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 10rem 9% 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        h2.heading {
+            font-size: 5rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        h2.heading span {
+            color: var(--main-color);
+        }
+
+        /* --- 2. Header / Navbar --- */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 2rem 9%;
+            background: var(--bg-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .header.sticky {
+            box-shadow: 0 .1rem 1rem var(--shadow-color);
+        }
+
+        .logo {
+            display: flex;
+            /* FIX: Added flex to align image and text */
+            align-items: center;
+            gap: 1.5rem;
+            font-size: 2.5rem;
+            color: var(--text-color);
+            font-weight: 600;
+            cursor: default;
+        }
+
+        /* FIX: Adjusted logo image styling to work within the <a> tag */
+        .logo img {
+            height: 5rem;
+            width: auto;
+        }
+
+        .navbar a {
+            font-size: 1.7rem;
+            color: var(--text-color);
+            margin-left: 4rem;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: var(--main-color);
+        }
+
+        #menu-icon {
+            font-size: 3.6rem;
+            color: var(--text-color);
+            display: none;
+            cursor: pointer;
+        }
+
+        #menu-icon svg {
+            width: 3.6rem;
+            height: 3.6rem;
+        }
+
+        /* --- 3. Hero Section --- */
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-img {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-img img {
+            width: 35vw;
+            max-width: 400px;
+            border-radius: 50%;
+            border: .5rem solid var(--main-color);
+            box-shadow: 0 0 2rem var(--main-color);
+            animation: floatImage 4s ease-in-out infinite;
+        }
+
+        @keyframes floatImage {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-2.4rem);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content h3 {
+            font-size: 3.2rem;
+            font-weight: 700;
+        }
+
+        .hero-content h3:nth-of-type(2) {
+            margin-bottom: 2rem;
+        }
+
+        .hero-content h1 {
+            font-size: 5.6rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .hero-content .multiple-text {
+            color: var(--main-color);
+            font-weight: 700;
+        }
+
+        .hero-content p {
+            font-size: 1.6rem;
+            line-height: 1.8;
+            margin: 2rem 0 4rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1.2rem 2.8rem;
+            background: var(--main-color);
+            border-radius: 4rem;
+            box-shadow: 0 0 1rem var(--main-color);
+            font-size: 1.6rem;
+            color: var(--second-bg-color);
+            letter-spacing: .1rem;
+            font-weight: 600;
+            transition: .5s ease;
+        }
+
+        .btn:hover {
+            box-shadow: none;
+        }
+
+        .social-media a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            background: transparent;
+            border: .2rem solid var(--main-color);
+            border-radius: 50%;
+            color: var(--main-color);
+            margin: 3rem 1.5rem 3rem 0;
+            transition: .5s ease;
+        }
+
+        .social-media a svg {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        .social-media a:hover {
+            background: var(--main-color);
+            color: var(--second-bg-color);
+            box-shadow: 0 0 1rem var(--main-color);
+        }
+
+        /* --- 4. About Section --- */
+        .about {
+            background-color: var(--second-bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .about-img {
+            text-align: center;
+        }
+
+        .about-img img {
+            width: 35vw;
+            max-width: 400px;
+            border-radius: 2rem;
+        }
+
+        .about-content {
+            text-align: left;
+        }
+
+        .about-content h2 {
+            text-align: left;
+            line-height: 1.2;
+        }
+
+        .about-content p {
+            font-size: 1.6rem;
+            margin: 2rem 0 3rem;
+            line-height: 1.8;
+        }
+
+        /* --- 5. Skills Section --- */
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .skill-box {
+            flex: 1 1 30rem;
+            background: var(--second-bg-color);
+            padding: 3rem 2rem 4rem;
+            border-radius: 2rem;
+            text-align: center;
+            border: .2rem solid var(--bg-color);
+            transition: .5s ease;
+        }
+
+        .skill-box:hover {
+            border-color: var(--main-color);
+            transform: scale(1.02);
+        }
+
+        /* FIX: Standardized skill icon styling */
+        .skill-box img {
+            width: 7rem;
+            height: 7rem;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
+
+        .skill-box h3 {
+            font-size: 2.6rem;
+            margin: 1rem 0;
+        }
+
+        .skill-box p {
+            font-size: 1.6rem;
+        }
+
+        /* --- 6. Projects Section --- */
+        .projects {
+            background: var(--second-bg-color);
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            position: relative;
+            border-radius: 2rem;
+            box-shadow: 0 0 1rem var(--shadow-color);
+            overflow: hidden;
+            display: flex;
+        }
+
+        .project-card img {
+            width: 100%;
+            transition: .5s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .project-layer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 4rem;
+            transform: translateY(100%);
+            transition: .5s ease;
+        }
+
+        .project-card:hover .project-layer {
+            transform: translateY(0);
+        }
+
+        .project-layer h4 {
+            font-size: 3rem;
+        }
+
+        .project-layer p {
+            font-size: 1.6rem;
+            margin: .3rem 0 1rem;
+        }
+
+        .project-layer a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 5rem;
+            height: 5rem;
+            background: var(--text-color);
+            border-radius: 50%;
+        }
+
+        .project-layer a svg {
+            width: 2.5rem;
+            height: 2.5rem;
+            color: var(--second-bg-color);
+        }
+
+        /* --- 7. Contact Section --- */
+        .contact-content {
+            max-width: 70rem;
+            margin: 1rem auto;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-content p {
+            font-size: 1.6rem;
+            line-height: 1.8;
+        }
+
+        .contact-content .contact-email {
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            color: var(--text-color);
+        }
+
+        .contact-content .contact-email svg {
+            width: 2.2rem;
+            height: 2.2rem;
+            color: var(--main-color);
+        }
+
+        .contact-content .social-media {
+            margin-top: 2rem;
+        }
+
+
+        /* --- 8. Footer --- */
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 2rem 9%;
+            background: var(--second-bg-color);
+        }
+
+        .footer-text p {
+            font-size: 1.6rem;
+        }
+
+        .footer-icon-top a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: .8rem;
+            background: var(--main-color);
+            border-radius: .8rem;
+            transition: .5s ease;
+        }
+
+        .footer-icon-top a:hover {
+            box-shadow: 0 0 1rem var(--main-color);
+        }
+
+        .footer-icon-top a svg {
+            width: 2.4rem;
+            height: 2.4rem;
+            color: var(--second-bg-color);
+        }
+
+
+        /* --- 9. Animation on Scroll --- */
+        /* FIX: Simplified and fixed animation logic */
+        .animate-on-scroll {
+            opacity: 0;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .animate-on-scroll.animate-from-bottom {
+            transform: translateY(100px);
+        }
+
+        .animate-on-scroll.animate-from-left {
+            transform: translateX(-100px);
+        }
+
+        .animate-on-scroll.animate-from-right {
+            transform: translateX(100px);
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0) translateX(0);
+            /* Reset both transforms */
+        }
+
+        /* FIX: Staggered animation delays for Hero content */
+        .hero-content.visible h3 {
+            transition-delay: 0.2s;
+        }
+
+        .hero-content.visible h1 {
+            transition-delay: 0.4s;
+        }
+
+        .hero-content.visible p {
+            transition-delay: 0.6s;
+        }
+
+        .hero-content.visible .social-media {
+            transition-delay: 0.8s;
+        }
+
+        .hero-content.visible .btn {
+            transition-delay: 1s;
+        }
+
+        .hero-img.visible {
+            transition-delay: 0.2s;
+        }
+
+
+        /* --- 10. Responsive Breakpoints --- */
+        @media (max-width: 1200px) {
+            html {
+                font-size: 55%;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .header {
+                padding: 2rem 3%;
+            }
+
+            section {
+                padding: 10rem 3% 2rem;
+            }
+
+            .footer {
+                padding: 2rem 3%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #menu-icon {
+                display: block;
+            }
+
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: -100%;
+                /* FIX: Animate from the side instead of just appearing */
+                width: 100%;
+                padding: 1rem 3%;
+                background: var(--bg-color);
+                border-top: .1rem solid rgba(0, 0, 0, .2);
+                box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+                transition: left 0.4s ease;
+                /* FIX: Added transition for smooth appearance */
+            }
+
+            .navbar.active {
+                left: 0;
+                /* FIX: Slide into view */
+            }
+
+            .navbar a {
+                display: block;
+                font-size: 2rem;
+                margin: 3rem 0;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero-content h3 {
+                font-size: 2.6rem;
+            }
+
+            .hero-content h1 {
+                font-size: 5rem;
+            }
+
+            .hero-img img {
+                width: 70vw;
+                margin-top: 4rem;
+            }
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+                /* FIX: Center text on smaller screens */
+            }
+
+            .about-content h2 {
+                text-align: center;
+            }
+
+            .about-img img {
+                width: 70vw;
+                margin-top: 4rem;
+            }
+
+            h2.heading {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 450px) {
+            html {
+                font-size: 50%;
+            }
+        }
+	</style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-SCMGH89S7V"></script>
@@ -30,97 +613,159 @@
   gtag('config', 'G-SCMGH89S7V');
 </script>
 <body>
+<header class="header">
+        <!-- FIX: Moved logo image inside the link and removed the old one -->
+        <a href="#" class="logo">
+            <img src="images/Ayush Devspace logo (1).png" alt="Ayush Devspace Logo">
+            Ayush Devspace
+        </a>
 
-	<div class="about-simple-footer">
-		<div class="about-me">
-			<b class="title">About me</b>
-			<div class="text">I am a passionate learner, creator, and aspiring engineer with a knack for storytelling
-				and a deep interest in technology. As a student of engineering, I enjoy exploring concepts that merge
-				creativity and logic. Currently I am enhancing my skills in front-end development, or presenting on
-				thought-provoking topics, I'm always eager to learn and grow. Beyond academics, I believe in constant
-				self-improvement and aim to make a positive impact through my work and passion for learning. Let's
-				connect and build something amazing together!</div>
-			<div class="button-primary">
-				<div class="text1"><a href="https://drive.google.com/file/d/1MOKcSIrijpGtTrxu3J6etEKu60srPxHK/view?usp=drive_link">Resume</a></div>
-			</div>
-		</div>
-		<div class="bg-2">
-			<div class="bg-2-child">
-			</div>
-			<img class="pexels-artem-beliaikin-1832323-icon" alt="" src="images/Ayush.png">
-
-		</div>
-		<header class="header">
-			<div class="madelyn-torff"><a href="index.html">Ayush Devspace</a></div>
-			<div class="nav">
-				<div class="tab-default" id="tabDefault">
-					<div class="sobre"><a href="index.html">Home</a></div>
-				</div>
-				<div class="tab-default" id="tabDefault">
-					<div class="sobre"><a href="about.html">About me</a></div>
-				</div>
-				<div class="tab-default" id="tabDefault">
-					<div class="sobre"><a href="projects.html">Projects</a></div>
-				</div>
-				<div class="tab-default">
-					<div class="sobre"><a href="achiev.html">Achievements</a></div>
-				</div>
-				<div class="tab-default">
-					<div class="sobre"><a href="extens.html">My Extensions</a></div>
-				</div>
-			</div>
-	</div>
-
-	</header>
-	<img class="ayush-devspace-logo" src="images/Ayush Devspace logo (1).png" />
-	<footer>
-
-		<div class="footer-social-icons">
-			<span>Connect with Me : </span>
-			<a href="https://github.com/itsAyush5" target="_blank" alt="Github">
-				<i class="fa-brands fa-github fa-2x"></i>
-			</a>
-			<a href="https://www.linkedin.com/in/ayushkunkulol5" target="_blank" alt="Linkedin">
-				<i class="fa-brands fa-linkedin fa-2x"></i>
-			</a>
-			<a href="https://www.instagram.com/ayush_kunkulol_/" target="_blank" alt="Instagram">
-				<i class="fa-brands fa-instagram fa-2x"></i>
-			</a>
-			<a href="https://x.com/yeah_its_Ayush/" target="_blank" alt="Twitter">
-				<i class="fa-brands fa-x-twitter"></i>
-			</a>
-		</div>
-	</footer>
-	</div>
-
-
-
-
+        <div id="menu-icon">
+            <!-- Hamburger Icon SVG -->
+            <svg class="hamburger" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                </path>
+            </svg>
+            <!-- Close Icon SVG -->
+            <svg class="close" style="display: none;" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </div>
+        <nav class="navbar">
+            <a href="#hero" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="#skills">Skills</a> <!-- FIX: Added missing Skills link -->
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a> <!-- FIX: Corrected "Achievements" to "Contact" -->
+        </nav>
+    </header>
+	<section class="about" id="about">
+        <div class="about-img animate-on-scroll animate-from-left">
+            <img src="images/Ayush.png" alt="A professional photo of Ayush">
+        </div>
+        <div class="about-content animate-on-scroll animate-from-right">
+            <h2 class="heading">About <span>Me</span></h2>
+            <p>
+                I am a passionate learner, creator, and aspiring engineer with a knack for storytelling and a deep
+                interest in technology. As a student of engineering, I enjoy exploring concepts that merge creativity
+                and logic. Currently I am enhancing my skills in front-end development, or presenting on
+                thought-provoking topics, I'm always eager to learn and grow. Beyond academics, I believe in constant
+                self-improvement and aim to make a positive impact through my work and passion for learning. Let's
+                connect and build something amazing together!
+            </p>
+            <!-- FIX: Suggest pointing this to a resume file -->
+            <a href="" class="btn" download>Download CV</a>
+        </div>
+    </section>
 	<script>
-		var madelynTorffText = document.getElementById("madelynTorffText");
-		if (madelynTorffText) {
-			madelynTorffText.addEventListener("click", function (e) {
-				// Add your code here
-			});
-		}
+		document.addEventListener('DOMContentLoaded', () => {
 
-		var tabDefault = document.getElementById("tabDefault");
-		if (tabDefault) {
-			tabDefault.addEventListener("click", function (e) {
-				// Add your code here
-			});
-		}
+            // --- 1. Navbar Toggle for Mobile ---
+            const menuIcon = document.querySelector('#menu-icon');
+            const hamburger = document.querySelector('#menu-icon .hamburger');
+            const closeIcon = document.querySelector('#menu-icon .close');
+            const navbar = document.querySelector('.navbar');
 
-		var sobreText = document.getElementById("sobreText");
-		if (sobreText) {
-			sobreText.addEventListener("click", function () {
-				var anchor = document.querySelector("[data-scroll-to='footerIcons']");
-				if (anchor) {
-					anchor.scrollIntoView({ "block": "start", "behavior": "smooth" })
-				}
-			});
-		}
+            const toggleMenu = () => {
+                navbar.classList.toggle('active');
+                const isActive = navbar.classList.contains('active');
+                hamburger.style.display = isActive ? 'none' : 'block';
+                closeIcon.style.display = isActive ? 'block' : 'none';
+            };
+
+            const closeMenu = () => {
+                navbar.classList.remove('active');
+                hamburger.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+
+            menuIcon.onclick = toggleMenu;
+
+            // --- 2. Active Nav Link Highlighting & Sticky Header ---
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('header nav a');
+            const header = document.querySelector('.header');
+
+            window.onscroll = () => {
+                // Sticky header
+                header.classList.toggle('sticky', window.scrollY > 100);
+
+                // Active nav link
+                let currentSectionId = '';
+                sections.forEach(sec => {
+                    const top = window.scrollY;
+                    const offset = sec.offsetTop - 150;
+                    const height = sec.offsetHeight;
+                    const id = sec.getAttribute('id');
+
+                    if (top >= offset && top < offset + height) {
+                        currentSectionId = id;
+                    };
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    const linkHref = link.getAttribute('href').substring(1);
+                    if (linkHref === currentSectionId) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // FIX: Close mobile nav on scroll for better UX
+                if (navbar.classList.contains('active')) {
+                    closeMenu();
+                }
+            };
+
+            // FIX: Add click listener to nav links to close menu on mobile
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768 && navbar.classList.contains('active')) {
+                        closeMenu();
+                    }
+                });
+            });
+
+
+            // --- 3. Typing Animation using Typed.js ---
+            if (document.querySelector('.multiple-text')) {
+                const typed = new Typed('.multiple-text', {
+                    strings: ['Frontend Developer', 'Programmer'],
+                    typeSpeed: 70,
+                    backSpeed: 70,
+                    backDelay: 1000,
+                    loop: true
+                });
+            }
+
+            // --- 4. Scroll Reveal Animations (Intersection Observer) ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                    // Optional: remove class when it goes out of view to re-animate
+                    // else {
+                    //     entry.target.classList.remove('visible');
+                    // }
+                });
+            }, {
+                threshold: 0.1 // Triggers when 10% of the element is visible
+            });
+
+            const elementsToAnimate = document.querySelectorAll('.animate-on-scroll');
+            elementsToAnimate.forEach((el) => observer.observe(el));
+
+            // --- 5. Dynamic Copyright Year ---
+            // FIX: Automatically update the copyright year
+            // const copyrightYear = document.getElementById('copyright-year');
+            // if(copyrightYear) {
+            //     copyrightYear.textContent = new Date().getFullYear();
+            // }
+
+        });
 	</script>
 </body>
-
 </html>
