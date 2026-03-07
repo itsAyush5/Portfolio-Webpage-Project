@@ -98,18 +98,19 @@ document.addEventListener('DOMContentLoaded', () => {
 document.getElementById('yr').textContent = new Date().getFullYear();
 // ...existing code...
 
-// Contact Form JS (form validation)
+// Contact Form JS (standard submission with UI feedback)
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
     if (form) {
         form.addEventListener('submit', function (e) {
+            // We DO NOT prevent default here so it actually posts to formsubmit!
             const name = form.name.value.trim();
             const email = form.email.value.trim();
             const message = form.message.value.trim();
+            const status = document.getElementById('form-status');
 
             if (!name || !email || !message) {
-                e.preventDefault();
-                const status = document.getElementById('form-status');
+                e.preventDefault(); // Stop submission if empty
                 if (status) {
                     status.textContent = 'Please fill in all fields.';
                     status.style.color = '#e94436';
@@ -117,11 +118,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
             
-            // Allow form to submit to formsubmit.co
-            const status = document.getElementById('form-status');
+            // Show sending text while the browser redirects
             if (status) {
-                status.textContent = 'Redirecting to finish sending...';
-                status.style.color = '#fff';
+                status.textContent = 'Sending message...';
+                status.style.color = '#109D58';
             }
         });
     }
