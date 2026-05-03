@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (document.querySelector('.multiple-text')) {
         const typed = new Typed('.multiple-text', {
-            strings: ['Frontend Developer', 'Programmer'],
+            strings: ['Full Stack Developer', 'Programmer','Podcaster', 'Tech Enthusiast'],
             typeSpeed: 70,
             backSpeed: 70,
             backDelay: 1000,
